@@ -1,3 +1,31 @@
+
+/*  Project Standards:
+  - Logging Standards
+  - Naming Standards
+      function, method, variable => CAMEL Case    // goHome
+      class => PASCAL.              
+      folder => KEBAB
+      css => SNAKE
+  - Error handling
+  - 
+
+
+*/
+
+/*
+   Traditional Api
+  Rest Api
+  GraphQL Api
+
+*/
+
+
+
+
+
+
+
+
 // function getSquareNumbers(numbers: number[]) {
 //   return numbers.map(number => ({
 //     number: number,
@@ -30,23 +58,14 @@
 // console.log(palindromCheck("radar"));
 // console.log(palindromCheck("ishtiyoq"));
 
+function calculateSumOfNumbers(arr: any[]): number {
+    let sum = 0;
+    for (const item of arr) {
+        if (typeof item === "number") {
+            sum += item;
+        }
+    }
 
-/*  Project Standards:
-  - Logging Standards
-  - Naming Standards
-      function, method, variable => CAMEL Case    // goHome
-      class => PASCAL.              
-      folder => KEBAB
-      css => SNAKE
-  - Error handling
-  - 
-
-
-*/
-
-/*
-   Traditional Api
-  Rest Api
-  GraphQL Api
-
-*/
+    return sum;
+};
+console.log(calculateSumOfNumbers([20, "20", { son: 20 }, true, 45]));
