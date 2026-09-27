@@ -35,7 +35,7 @@ memberPassword: {
     required: true,
 },
 
-memberAdress: {
+memberAddress: {
     type: String,
 },
 
@@ -47,7 +47,7 @@ memberImages: {
     type: String,
 },
 
-memeberPoints: {
+memberPoints: {
     type: Number,
     default: 0,
  },
