@@ -47,7 +47,7 @@ class MemberService {
      const isMatch = await bcrypt.compare(
         input.memberPassword,
         member.memberPassword
-     )
+     );
     //   const isMatch = input.memberPassword === member.memberPassword;
 
 
