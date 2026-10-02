@@ -95,3 +95,17 @@
 // console.log(objectToArray({ a: 30, b: 18 }));
 // console.log(objectToArray({ a: 4, b: 111}));
 // console.log(objectToArray({ a: 20, b: 6 }));
+
+
+function hasProperty(obj: any, property: string): boolean {
+    for (let key in obj) {
+        if (key === property) {
+             return true;
+        }
+    }
+
+return false;
+}
+
+console.log(hasProperty({ name: "BMW", model: "M3" }, "model"));
+console.log(hasProperty({ name: "BMW", model: "M3" }, "year"));
