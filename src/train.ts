@@ -20,6 +20,12 @@
 */
 
 
+/*
+  Traditional FD ==> BSSR (Admin) => EJS
+  Modern FD      ==> SPA (User's aplication) => REACT
+  */
+
+
 
 
 
@@ -76,16 +82,16 @@
 // MIT P task
 
 
-function objectToArray(obj: any) {
-    let arr = [];
-    for (let key in obj) {
-        arr.push([key, obj[key]]);
-    }
+// function objectToArray(obj: any) {
+//     let arr = [];
+//     for (let key in obj) {
+//         arr.push([key, obj[key]]);
+//     }
 
 
-    return arr;
-}
+//     return arr;
+// }
 
-console.log(objectToArray({ a: 30, b: 18 }));
-console.log(objectToArray({ a: 4, b: 111}));
-console.log(objectToArray({ a: 20, b: 6 }));
+// console.log(objectToArray({ a: 30, b: 18 }));
+// console.log(objectToArray({ a: 4, b: 111}));
+// console.log(objectToArray({ a: 20, b: 6 }));
