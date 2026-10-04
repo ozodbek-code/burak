@@ -97,15 +97,30 @@
 // console.log(objectToArray({ a: 20, b: 6 }));
 
 
-function hasProperty(obj: any, property: string): boolean {
-    for (let key in obj) {
-        if (key === property) {
-             return true;
-        }
-    }
+// function hasProperty(obj: any, property: string): boolean {
+//     for (let key in obj) {
+//         if (key === property) {
+//              return true;
+//         }
+//     }
 
-return false;
+// return false;
+// }
+
+// console.log(hasProperty({ name: "BMW", model: "M3" }, "model"));
+// console.log(hasProperty({ name: "BMW", model: "M3" }, "year"));
+
+
+function calculate(str: string): number {
+    let arr = str.split("+");
+
+    let num1 = Number(arr[0]);
+    let num2 = Number(arr[1]);
+
+    return num1 + num2;
 }
 
-console.log(hasProperty({ name: "BMW", model: "M3" }, "model"));
-console.log(hasProperty({ name: "BMW", model: "M3" }, "year"));
+console.log(calculate("10+3")); 
+console.log(calculate("100+20")); 
+console.log(calculate("69+39099")); 
+console.log(calculate("213233+2999")); 
