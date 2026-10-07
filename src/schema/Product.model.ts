@@ -39,7 +39,7 @@ const productSchema = new Schema(
 
       productVolume: {
         type: String,
-        unum: ProductVolume,
+        enum: ProductVolume,
         default: ProductVolume.ONE,
       },
 
