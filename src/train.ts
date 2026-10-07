@@ -123,16 +123,38 @@
 // console.log(hasProperty({ name: "BMW", model: "M3" }, "year"));
 
 
-function calculate(str: string): number {
-    let arr = str.split("+");
+// function calculate(str: string): number {
+//     let arr = str.split("+");
 
-    let num1 = Number(arr[0]);
-    let num2 = Number(arr[1]);
+//     let num1 = Number(arr[0]);
+//     let num2 = Number(arr[1]);
 
-    return num1 + num2;
+//     return num1 + num2;
+// }
+
+// console.log(calculate("10+3")); 
+// console.log(calculate("100+20")); 
+// console.log(calculate("69+39099")); 
+// console.log(calculate("213233+2999")); 
+
+
+
+function missingNumber(arr: number[]): number {
+  for (let i = 0; i <= arr.length; i++) {
+  let found = false;
+
+ for (let j = 0; j < arr.length; j++) {
+ if (arr[j] === i) {
+  found = true;
+   break;
+}
+  }
+if (found === false) {
+return i;
+    }
 }
 
-console.log(calculate("10+3")); 
-console.log(calculate("100+20")); 
-console.log(calculate("69+39099")); 
-console.log(calculate("213233+2999")); 
+    return -1;
+}
+
+console.log(missingNumber([3, 0, 1, 4, 5,])); 
