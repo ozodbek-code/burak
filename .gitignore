@@ -2,3 +2,4 @@ node_models
 dist
 
 .env
+uploads
