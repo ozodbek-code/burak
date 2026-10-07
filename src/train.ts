@@ -12,7 +12,7 @@
 
 */
 
-/*
+/* Request
    Traditional Api
   Rest Api
   GraphQL Api
@@ -20,10 +20,22 @@
 */
 
 
-/*
+/* Fronted Development
   Traditional FD ==> BSSR (Admin) => EJS
   Modern FD      ==> SPA (User's aplication) => REACT
   */
+
+  /* Cookies:
+  request join
+  self destroy
+
+  */
+
+  /* Validation
+  Fronted validation
+  Backend validation
+  Database validation
+*/
 
 
 
