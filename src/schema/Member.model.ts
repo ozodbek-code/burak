@@ -43,7 +43,7 @@ memberDesc: {
     type: String,
 },
 
-memberImages: {
+memberImage: {
     type: String,
 },
 
