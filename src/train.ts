@@ -139,22 +139,33 @@
 
 
 
-function missingNumber(arr: number[]): number {
-  for (let i = 0; i <= arr.length; i++) {
-  let found = false;
+// function missingNumber(arr: number[]): number {
+//   for (let i = 0; i <= arr.length; i++) {
+//   let found = false;
 
- for (let j = 0; j < arr.length; j++) {
- if (arr[j] === i) {
-  found = true;
-   break;
-}
-  }
-if (found === false) {
-return i;
-    }
-}
+//  for (let j = 0; j < arr.length; j++) {
+//  if (arr[j] === i) {
+//   found = true;
+//    break;
+// }
+//   }
+// if (found === false) {
+// return i;
+//     }
+// }
 
-    return -1;
-}
+//     return -1;
+// }
 
-console.log(missingNumber([3, 0, 1, 4, 5,])); 
+// console.log(missingNumber([3, 0, 1, 4, 5,])); 
+
+
+// MIT T-task
+function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
+    const result = [...arr1, ...arr2];
+  result.sort((a, b) => a - b);
+
+ return result;
+};
+
+console.log(mergeSortedArrays([0, 4, 5, 30], [15, 3, 25]));
