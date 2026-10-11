@@ -13,7 +13,7 @@
 */
 
 /* Request
-   Traditional Api
+   Traditional Api (form POST)
   Rest Api
   GraphQL Api
 
