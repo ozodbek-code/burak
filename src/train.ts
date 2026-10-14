@@ -176,15 +176,28 @@
 // MIT U-task
 
 
-function sumOdds(n: number): number {
-  let count = 0;
+// function sumOdds(n: number): number {
+//   let count = 0;
 
-  for (let i = 1; i <= n; i += 2) {
-    count++;
-  }
+//   for (let i = 1; i <= n; i += 2) {
+//     count++;
+//   }
 
-  return count;
+//   return count;
+// }
+
+// console.log(sumOdds(8));  
+// console.log(sumOdds(13)); 
+
+
+
+function countChars(str: string) {
+    let obj: any = {};
+    for (let char of str) {
+     obj[char] = (obj[char] || 0) + 1;
+    }
+ return obj;
 }
 
-console.log(sumOdds(8));  
-console.log(sumOdds(13)); 
+console.log(countChars("hello"));
+console.log(countChars("salomalekum"));
