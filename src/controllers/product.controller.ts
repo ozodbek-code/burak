@@ -18,6 +18,8 @@ const productController: T = {};
     try {
         console.log("getAllProducts");
         const data = await productService.getAllProducts();
+        console.log("products", data);
+
         res.render("products", {products: data});
     } catch (err) {
         console.log("ERROR, getAllProducts:", err);
