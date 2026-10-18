@@ -191,13 +191,27 @@
 
 
 
-function countChars(str: string) {
-    let obj: any = {};
-    for (let char of str) {
-     obj[char] = (obj[char] || 0) + 1;
+// function countChars(str: string) {
+//     let obj: any = {};
+//     for (let char of str) {
+//      obj[char] = (obj[char] || 0) + 1;
+//     }
+//  return obj;
+// }
+
+// console.log(countChars("hello"));
+// console.log(countChars("salomalekum"));
+
+
+// MIT W-task
+
+
+function chunkArray(arr: number[], size: number): number[][] {
+    let result: number[][] = [];
+      for (let i = 0; i < arr.length; i += size) {
+        result.push(arr.slice(i, i + size));
     }
- return obj;
+   return result;
 }
 
-console.log(countChars("hello"));
-console.log(countChars("salomalekum"));
+console.log(chunkArray([1,2,3,4,5,6,7,8,9,10], 3));
