@@ -218,20 +218,34 @@
 
 
 
-function countOccurrences(obj: any, str: string): number {
-  let count = 0;
-  for (let key in obj) {
-  if (key === str) {
-  count++;
-  }
+// function countOccurrences(obj: any, str: string): number {
+//   let count = 0;
+//   for (let key in obj) {
+//   if (key === str) {
+//   count++;
+//   }
 
-if (typeof obj[key] === "object" && obj[key] !== null) {
-  count += countOccurrences(obj[key], str);
- }
+// if (typeof obj[key] === "object" && obj[key] !== null) {
+//   count += countOccurrences(obj[key], str);
+//  }
+//   }
+// return count;
+// }
+
+// console.log(
+//   countOccurrences({ model: "Chevrolet", steer: { model: "Cobalt", size: 20 } },"model")
+// );
+
+// MIT Y-task
+
+function findIntersection(arr1: number[], arr2: number[]): number[] {
+  const result: number[] = [];
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr2.includes(arr1[i])) {
+    result.push(arr1[i]);
+    }
   }
-return count;
+  return result;
 }
 
-console.log(
-  countOccurrences({ model: "Chevrolet", steer: { model: "Cobalt", size: 20 } },"model")
-);
+console.log(findIntersection([3, 5, 7, 8], [3, 5, 8, 9]));
