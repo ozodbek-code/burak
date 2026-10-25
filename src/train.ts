@@ -238,14 +238,31 @@
 
 // MIT Y-task
 
-function findIntersection(arr1: number[], arr2: number[]): number[] {
-  const result: number[] = [];
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr2.includes(arr1[i])) {
-    result.push(arr1[i]);
+// function findIntersection(arr1: number[], arr2: number[]): number[] {
+//   const result: number[] = [];
+//   for (let i = 0; i < arr1.length; i++) {
+//     if (arr2.includes(arr1[i])) {
+//     result.push(arr1[i]);
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(findIntersection([3, 5, 7, 8], [3, 5, 8, 9]));
+
+
+// MIT Z-task
+
+function sumEvens(arr: number[]): number {
+  let sum = 0;
+   for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      sum += arr[i];
     }
   }
-  return result;
+  return sum;
 }
 
-console.log(findIntersection([3, 5, 7, 8], [3, 5, 8, 9]));
+console.log(sumEvens([1, 2, 3]));  
+console.log(sumEvens([11, 22, 43, 61]));   
+console.log(sumEvens([18, 12, 9]));     
