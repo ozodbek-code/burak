@@ -20,6 +20,7 @@ const store = new MongoDBStore( {
 const app = express();
 
 app.use(express.static(path.join(__dirname, "public"))); // Static folderlarni clientlarga ochiq qilish
+app.use("/uploads", express.static("./uploads"));
 app.use(express.urlencoded({ extended: true })); // HTML , traditional api
 app.use(express.json()); // Rest api lardan kelayotgan body qismini bizning serverga tashrifini amalga oshiradi
 app.use(cookieParser()); // Cookies ni parsing qilishda ishlatiladi
