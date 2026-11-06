@@ -52,7 +52,7 @@ memberPoints: {
     default: 0,
  },
 },
-     {timestamps: true } // updatedAt, createdAt
+     { timestamps: true } // updatedAt, createdAt
 );
 
 export default mongoose.model('Member', MemberSchema);
