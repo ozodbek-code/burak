@@ -4,6 +4,7 @@ import { T } from "../libs/types/common";
 import { shapeIntoMongooseObjectId } from "../libs/types/config";
 import { Product, ProductInput, ProductInquiry, ProductUpdateInput } from "../libs/types/product";
 import ProductModel from "../schema/Product.model";
+import { ObjectId } from "mongoose";
 
 class ProductService {
     private readonly productModel;
@@ -29,7 +30,8 @@ public async getProducts(inquiry: ProductInquiry): Promise<Product[]>  {
          ? { [inquiry.order]: 1 } 
          : { [inquiry.order]: -1 };
 
-   const result = await this.productModel.aggregate([
+   const result = await this.productModel
+   .aggregate([
       { $match: match },
       { $sort: sort },
       { $skip: (inquiry.page * 1 -1) * inquiry.limit }, // 0
@@ -38,6 +40,25 @@ public async getProducts(inquiry: ProductInquiry): Promise<Product[]>  {
    .exec();
    if (!result) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND);
    return result;
+}
+
+public async getProduct(
+    memberId: ObjectId | null,
+    id: string
+): Promise<Product> {
+    const productId = shapeIntoMongooseObjectId(id);
+
+    let result = await this.productModel
+    .findOne({
+        _id: productId, 
+        productStatus: ProductStatus.PROCESS
+    })
+    .exec();
+    if(!result) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND);
+
+// TODO: if authenticated users ==> first => view log creation
+
+    return result;
 }
 
 /** SSR */ 
